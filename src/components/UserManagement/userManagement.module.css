@@ -1,0 +1,112 @@
+.container {
+	width: 100%;
+	margin: auto;
+	position: relative;
+}
+
+.main {
+	position: relative;
+}
+
+.headerSection {
+	border: 3px solid green;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	align-items: center;
+}
+
+.headerSection h1{
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.headerSection button{
+	background: #FBCE60;
+	padding: 10px 15px 10px 15px;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius: 10px;
+	transition: background .3s linear;
+}
+
+.headerSection button:hover{
+	background: #9a7f3b;
+}
+
+.usersSection {
+	border: 3px solid red;
+	height: 80vh;
+	overflow-y: auto;
+}
+
+.usersSection ul li {
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	border-radius: 10px;
+	opacity: 0;
+	animation: animateList .5s linear forwards;
+}
+
+@keyframes animateList {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.usersSection ul li + li {
+	margin-top: 10px;
+}
+
+.defaultListElem  {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.defaultListElem span:nth-child(2) {
+	margin-right: 140px;
+}
+
+.userData {
+	display: flex;
+	flex-direction: column;
+}
+
+.userActions {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.userActions div   {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.userActions div img + span  {
+	margin-left: 5px;
+}
+
+@media screen and (min-width: 768px){
+	.container {
+		width: calc(100% - 10rem);
+	}
+}
+
+
+
+
